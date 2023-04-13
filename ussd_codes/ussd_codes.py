@@ -1,4 +1,4 @@
-from admin_controls.admin_codes import client
+from admin_control.admin_codes import client
 from faunadb import query as q
 
 
