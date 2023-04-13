@@ -29,12 +29,12 @@ def replies(mobile, text) -> str:
     response =""
 
     if signed == "" :
-        response = f"""WELCOME TO TPAY
+        response = f""" CON WELCOME TO TPAY
 
 Please set up your TPay PIN to use this service """
 
     elif signed != "" and birth == "":
-        response = f"""WELCOME TO TPAY
+        response = f"""CON WELCOME TO TPAY
 
 Please add your Date of Birth for security before proceeding """
 
