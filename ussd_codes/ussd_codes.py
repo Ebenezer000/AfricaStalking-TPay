@@ -29,7 +29,7 @@ def replies(mobile, text) -> str:
     response =""
 
     if signed == "" :
-        response = f""" CON WELCOME TO TPAY
+        response = f"""CON WELCOME TO TPAY
 
 Please set up your TPay PIN to use this service """
         client.query(q.update(q.ref(q.collection("userData"), mobile), {"data": {"signed": "DONE"}}))
