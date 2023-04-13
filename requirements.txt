@@ -1,0 +1,6 @@
+Flask
+gunicorn
+requests
+faunadb
+africastalking
+django
