@@ -23,6 +23,7 @@ def replies(mobile, text) -> str:
     birth = using["data"]["birth"]
     amount = using["data"]["amount"]
     hold_reply = using["data"]["hold_reply"]
+    conversation_level = using["data"]["conversation_level"]
     signed = using["data"]["signed"]
 
 
@@ -33,7 +34,10 @@ def replies(mobile, text) -> str:
 
 Please set up your TPay PIN to use this service """
         client.query(q.update(q.ref(q.collection("userData"), mobile), {"data": {"signed": "DONE"}}))
+        client.query(q.update(q.ref(q.collection("userData"), mobile), {"data": {"conversation_level": "password"}}))
 
+    elif signed != "" and conversation_level == "password":
+        response = f"""END Setup Complete"""
 
     else:
         if text == "":
