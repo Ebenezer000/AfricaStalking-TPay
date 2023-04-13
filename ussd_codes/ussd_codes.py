@@ -32,11 +32,8 @@ def replies(mobile, text) -> str:
         response = f""" CON WELCOME TO TPAY
 
 Please set up your TPay PIN to use this service """
+        client.query(q.update(q.ref(q.collection("userData"), mobile), {"data": {"signed": "DONE"}}))
 
-    elif signed != "" and birth == "":
-        response = f"""CON WELCOME TO TPAY
-
-Please add your Date of Birth for security before proceeding """
 
     else:
         if text == "":
