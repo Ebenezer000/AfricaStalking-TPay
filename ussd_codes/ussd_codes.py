@@ -3,7 +3,6 @@ from faunadb import query as q
 
 
 def user_replied(ussd, reply) ->bool:
-    print(reply)
     if ussd in reply and len(reply) != len(ussd):
         return True
     else:
