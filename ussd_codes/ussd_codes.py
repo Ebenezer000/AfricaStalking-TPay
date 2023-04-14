@@ -10,14 +10,14 @@ def user_replied(ussd, reply) ->bool:
         return False
     
 def get_user_reply(ussd, reply) -> str:
-    start = len(ussd) - 1
-    end = len(reply) -1
-    user_reply = reply[start, end]
+    start = len(ussd)
+    end = len(reply)
+    user_reply = reply[start:end]
     return user_reply
 
 
 def replies(mobile, text) -> str:
-    
+
     using = client.query(q.get(q.ref(q.collection("userData"), mobile)))
     trans_acc = using["data"]["trans_acc"]
     tkey = using["data"]["tkey"]

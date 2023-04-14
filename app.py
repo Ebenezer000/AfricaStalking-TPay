@@ -35,12 +35,6 @@ def hook():
             }
             }))
         print(text)
-        print(text)
-        print(text)
-        print(text)
-        print(text)
-        print(text)
-        print(text)
 
         response = replies(mobile, text)
     return response
