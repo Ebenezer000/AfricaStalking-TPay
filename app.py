@@ -1,6 +1,6 @@
 from flask import Flask, request, make_response
 from faunadb import query as q
-from admin_control.admin_codes import client
+from admin_controls.admin_codes import client
 from ussd_codes.ussd_codes import replies
 
 app = Flask(__name__)
