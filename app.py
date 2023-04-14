@@ -34,6 +34,13 @@ def hook():
                 "conversation_level": ""
             }
             }))
+        print(text)
+        print(text)
+        print(text)
+        print(text)
+        print(text)
+        print(text)
+        print(text)
 
         response = replies(mobile, text)
     return response
