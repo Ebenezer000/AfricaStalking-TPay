@@ -36,8 +36,10 @@ Please set up your TPay PIN to use this service """
         client.query(q.update(q.ref(q.collection("userData"), mobile), {"data": {"signed": "DONE"}}))
         client.query(q.update(q.ref(q.collection("userData"), mobile), {"data": {"conversation_level": "password"}}))
 
-    elif signed != "" and conversation_level == "password":
+    elif signed != "" and conversation_level == "password" and tkey == "":
         response = f"""END Setup Complete"""
+        client.query(q.update(q.ref(q.collection("userData"), mobile), {"data": {"tkey": text}}))
+
 
     else:
         if text == "":
