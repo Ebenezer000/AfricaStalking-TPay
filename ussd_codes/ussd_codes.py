@@ -77,7 +77,7 @@ Please set up your TPay PIN to use this service """
         elif user_replied("2*", text) == True:
             reply = get_user_reply("2*", text)
             if reply == tkey:
-                response = "CON Your TPay Balance is ₦0"
+                response = "END Your TPay Balance is ₦0"
             else:
                 response = "END Incorrect PIN"
         
